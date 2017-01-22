@@ -1,0 +1,10 @@
+{
+  "name": "AngularTemplate",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "latest",
+    "express": "latest",
+    "markdown": "^0.5.0",
+    "node": "latest"
+  }
+}
