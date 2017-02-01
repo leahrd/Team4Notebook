@@ -9,6 +9,14 @@ app.config(function($routeProvider,$locationProvider) {
                 templateUrl: '../partials/home.html',
                 controller: 'mainCtrl'
         })
+        .when('/log', {
+                templateUrl: '../partials/log.html',
+                controller: 'mainCtrl'
+        })
+        .when('/entry1', {
+                templateUrl: '../partials/entry1.html',
+                controller: 'mainCtrl'
+        })
         .when('/about', {
                 templateUrl: '../partials/about.html',
                 controller: 'mainCtrl'
