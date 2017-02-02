@@ -17,6 +17,7 @@ html {
         margin-left: 0px;
         margin-right: 0px;
         background-image: cover;
+        background-repeat: no-repeat;
         margin-bottom: 0;
         color: #fff;
 }
