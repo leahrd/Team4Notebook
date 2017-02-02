@@ -17,7 +17,7 @@ html {
         margin-left: 0px;
         margin-right: 0px;
         background-size: cover;
-        height: 600px !important;
+        min-height: 300px !important;
             margin-bottom: 0;
             color: #fff;
 }
@@ -194,6 +194,7 @@ nav {
 
 
 .jumbotron {
+
         padding-top: 100px;
         margin-left: 0 !important;
         margin-right: 0 !important;
