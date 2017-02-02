@@ -8,6 +8,10 @@ html {
     height: 100%;
 }
 .landing-bg {
+        linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
         background-image: url('../images/dewick.JPG');
         margin-left: 0px;
         margin-right: 0px;
