@@ -16,8 +16,7 @@ html {
         background-image: url('../images/dewick.JPG');
         margin-left: 0px;
         margin-right: 0px;
-        background-image: cover;
-        background-repeat: no-repeat;
+        background-image: 100%;
         margin-bottom: 0;
         color: #fff;
 }
