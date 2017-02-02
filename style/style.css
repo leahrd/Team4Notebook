@@ -191,8 +191,8 @@ nav {
 .jumbotron {
         padding-top: 100px;
         background-color: inherit;
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
         margin-bottom: 0;
         color:white !important;
 
