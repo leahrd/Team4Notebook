@@ -12,7 +12,7 @@ html {
       rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)
     ),
-        background-image: url('../images/dewick.JPG');
+        image: url('../images/dewick.JPG');
         margin-left: 0px;
         margin-right: 0px;
         background-size: cover;
