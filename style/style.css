@@ -9,7 +9,7 @@ html {
 }
 
 .jumbotron-heading {
-   
+
 }
 .landing-bg {
          background: rgba(0, 0, 0, 0.25); /*can be anything, of course*/
@@ -17,10 +17,8 @@ html {
         margin-left: 0px;
         margin-right: 0px;
         background-image: cover;
-        min-height: 400px !important;
-
-            margin-bottom: 0;
-            color: #fff;
+        margin-bottom: 0;
+        color: #fff;
 }
 .profile {
         width:200px;
