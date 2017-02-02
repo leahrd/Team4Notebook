@@ -12,7 +12,7 @@ html {
     font-weight: 300;
 }
 .landing-bg {
-         background: rgba(0, 0, 0, 0.35); /*can be anything, of course*/
+         background: rgba(0, 0, 0, 0.5); /*can be anything, of course*/
         background-image: url('../images/dewick.JPG');
         margin-left: 0px;
         margin-right: 0px;
