@@ -6,23 +6,23 @@ app.config(function($routeProvider,$locationProvider) {
 
   $routeProvider
         .when('/', {
-                templateUrl: '../partials/home.html',
+                templateUrl: '../Team4Notebook/partials/home.html',
                 controller: 'mainCtrl'
         })
         .when('/log', {
-                templateUrl: '../partials/log.html',
+                templateUrl: '../Team4Notebook/partials/log.html',
                 controller: 'mainCtrl'
         })
         .when('/entry1', {
-                templateUrl: '../partials/entry1.html',
+                templateUrl: '../Team4Notebook/partials/entry1.html',
                 controller: 'mainCtrl'
         })
         .when('/about', {
-                templateUrl: '../partials/about.html',
+                templateUrl: '../Team4Notebook/partials/about.html',
                 controller: 'mainCtrl'
         })
         .when('/contact', {
-                templateUrl: '../partials/contact.html',
+                templateUrl: '../Team4Notebook/partials/contact.html',
                 controller: 'mainCtrl'
         })
 });
