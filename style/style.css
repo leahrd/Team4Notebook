@@ -4,6 +4,15 @@ body {
         font-size: 17px;
         background-color: #FDFFFC;
 }
+html {
+    height: 100%;
+}
+.header {
+        background-image: url('../images/dewick.JPG');
+        margin-left: 0px;
+        margin-right: 0px;
+        background-size: cover;
+}
 .profile {
         width:200px;
         display: block;
