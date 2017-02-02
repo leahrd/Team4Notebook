@@ -10,7 +10,7 @@ html {
 .landing-bg {
         width:100%;
         height:auto;
-         background: rgba(0, 0, 0, 0.1); /*can be anything, of course*/
+         background: rgba(0, 0, 0, 0.05); /*can be anything, of course*/
         background-image: url('../images/dewick.JPG');
         margin-left: 0;
         margin-right: 0;
@@ -191,6 +191,8 @@ nav {
 .jumbotron {
         padding-top: 100px;
         background-color: inherit;
+        padding-left: 0;
+        padding-right: 0;
         margin-bottom: 0;
         color:white !important;
 
