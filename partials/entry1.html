@@ -20,12 +20,25 @@
         </ul>
         <h1>Database Schema</h1>
         <h3>Food</h3>
-        <table class="table">
-                <tr>
-                <th>Name</th>
-                <th>Data Type</th>
-        </tr>
-        </table>
+        <table class="table table-compressed table-striped">
+	<thead>
+		<tr><th>foods</th><th></th><th></th><th></th><th></th><th></th></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td>int</td><td>1.2E+08</td><td>9</td><td>pk</td><td>AUTO_INCREMENT</td></tr>
+		<tr><td>name</td><td>var_char</td><td>John Smith</td><td>30</td><td></td><td>NOT NULL</td></tr>
+		<tr><td>calories</td><td>int</td><td>200</td><td>9</td><td></td><td>NOT NULL</td></tr>
+		<tr><td>fat</td><td>int</td><td>2</td><td>9</td><td></td><td>NOT NULL</td></tr>
+		<tr><td>sodium</td><td>int</td><td>120</td><td>9</td><td></td><td>NOT NULL</td></tr>
+		<tr><td>sugar</td><td>int</td><td>3</td><td>9</td><td></td><td>NOT NULL</td></tr>
+		<tr><td>vegetarian</td><td>boolean</td><td>TRUE</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>vegan</td><td>boolean</td><td>FALSE</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>allergen</td><td>var_char</td><td>Tree Nut</td><td>30</td><td></td><td>NOT NULL</td></tr>
+		<tr><td>created_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>updated_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+	</tbody>
+</table>
+
         <p></p>
         <h1>Wireframes</h1>
         <div class="col-lg-6">
