@@ -16,8 +16,8 @@ html {
         background-image: url('../images/fruit.jpeg');
         margin-left: 0px;
         margin-right: 0px;
-        width: 100%
-        background-repeat: no-repeat;;
+        width: 100%;
+        background-size: cover;
         margin-bottom: 0;
         color: #fff;
 }
