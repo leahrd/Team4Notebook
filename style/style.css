@@ -12,13 +12,13 @@ html {
 
 }
 .landing-bg {
-        min-height: 400px;
-        width:100%;
+        background: rgba(0, 0, 0, 0.5);
         background-image: url('../images/fruit.jpeg');
         margin-left: 0px;
         margin-right: 0px;
+        width:auto;
         background-size: contain;
-        background-repeat: repeat;
+        background-repeat: no-repeat;;
         margin-bottom: 0;
         color: #fff;
 }
