@@ -260,7 +260,7 @@ body {
 
 /* Center align the text within the three columns below the carousel */
 .marketing {
-        padding:20px;
+        padding-top:50px;
 }
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
