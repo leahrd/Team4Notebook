@@ -35,7 +35,6 @@ html {
 }
 hr {
         border: none;
-        height:1px;
         /* Set the hr color */
         color: #414b56; /* old IE */
         background-color: #414b56; /* Modern Browsers */
