@@ -38,6 +38,109 @@
 		<tr><td>updated_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
 	</tbody>
 </table>
+<table class="table table-compressed table-striped">
+	<thead>
+		<tr><th>menus</th><th></th><th></th><th></th><th></th><th></th></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td>int</td><td>1.2E+08</td><td>9</td><td>pk</td><td>AUTO_INCREMENT</td></tr>
+	</tbody>
+</table>
+<table class="table table-compressed table-striped">
+	<thead>
+		<tr><th>menu_foods</th><th></th><th></th><th></th><th></th><th></th></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td>int</td><td>1.2E+08</td><td>9</td><td>pk</td><td>AUTO_INCREMENT</td></tr>
+		<tr><td>menu_id</td><td>int</td><td>1.2E+08</td><td>9</td><td>fk</td><td>references meals</td></tr>
+		<tr><td>food_id</td><td>int</td><td>1.2E+08</td><td>9</td><td>fk</td><td>references foods</td></tr>
+		<tr><td>created_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>updated_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+	</tbody>
+</table>
+<table class="table table-compressed table-striped">
+	<thead>
+		<tr><th>locations</th><th></th><th></th><th></th><th></th><th></th></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td>int</td><td>1.2E+08</td><td>9</td><td>pk</td><td>AUTO_INCREMENT</td></tr>
+		<tr><td>people</td><td>int</td><td>1.2E+08</td><td>9</td><td></td><td>NOT NULL</td></tr>
+		<tr><td>name</td><td>varchar</td><td>John Smith</td><td>30</td><td></td><td>NOT NULL</td></tr>
+		<tr><td>created_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>updated_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+	</tbody>
+</table>
+<table class="table table-compressed table-striped">
+	<thead>
+		<tr><th>location_dates</th><th></th><th></th><th></th><th></th><th></th></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td></td><td>1.2E+08</td><td>9</td><td>pk</td><td>AUTO_INCREMENT</td></tr>
+		<tr><td>location_id</td><td>pk</td><td>1.2E+08</td><td>9</td><td></td><td>references locations</td></tr>
+		<tr><td>date_time</td><td>datetime</td><td>#######</td><td></td><td></td><td></td></tr>
+		<tr><td>created_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>updated_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+	</tbody>
+</table>
+<table class="table table-compressed table-striped">
+	<thead>
+		<tr><th>location_date_menus</th><th></th><th></th><th></th><th></th><th></th></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td>int</td><td>1.2E+08</td><td>9</td><td>pk</td><td>AUTO_INCREMENT</td></tr>
+		<tr><td>location_dates_id</td><td>int</td><td>1.2E+08</td><td>9</td><td>fk</td><td>references location dates</td></tr>
+		<tr><td>menus_id</td><td>int</td><td>1.2E+08</td><td>9</td><td>fk</td><td>references menus</td></tr>
+		<tr><td>created_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>updated_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+	</tbody>
+</table>
+<table class="table table-compressed table-striped">
+	<thead>
+		<tr><th>persons</th><th></th><th></th><th></th><th></th><th></th></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td>int</td><td>1.2E+08</td><td>9</td><td>pk</td><td>AUTO_INCREMENT</td></tr>
+		<tr><td>date_food_id</td><td>int</td><td>1.2E+08</td><td>9</td><td>fk</td><td>refrences date_food</td></tr>
+		<tr><td>calorie_goal</td><td>int</td><td>1.2E+08</td><td>9</td><td></td><td></td></tr>
+		<tr><td>fat_goals</td><td>int</td><td>1.2E+08</td><td>9</td><td></td><td></td></tr>
+		<tr><td>sodium_goals</td><td>int</td><td>1.2E+08</td><td>9</td><td></td><td></td></tr>
+		<tr><td>sugar_goals</td><td>int</td><td>1.2E+08</td><td>9</td><td></td><td></td></tr>
+		<tr><td>first_name</td><td>varchar</td><td>John</td><td>30</td><td></td><td></td></tr>
+		<tr><td>last_name</td><td>varchar</td><td>Smith</td><td>30</td><td></td><td></td></tr>
+		<tr><td>username</td><td>varchar</td><td>jsmith</td><td>30</td><td></td><td>NOT NULL</td></tr>
+		<tr><td>password</td><td>varchar</td><td>password</td><td>30</td><td></td><td>NOT NULL</td></tr>
+		<tr><td>Vegetarian</td><td>boolean</td><td>TRUE</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>Vegan</td><td>boolean</td><td>FALSE</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>Allergies</td><td>varchar</td><td>Tree Nuts</td><td>30</td><td></td><td></td></tr>
+		<tr><td>created_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>updated_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+	</tbody>
+</table>
+<table class="table table-compressed table-striped">
+	<thead>
+		<tr><th>date_foods</th><th></th><th></th><th></th><th></th><th></th></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td>int</td><td>1.2E+08</td><td>9</td><td>pk</td><td>AUTO_INCREMENT</td></tr>
+		<tr><td>date_time</td><td>datetime</td><td>#######</td><td></td><td></td><td></td></tr>
+		<tr><td>food_id</td><td>int</td><td>1.2E+08</td><td>9</td><td>fk</td><td>references food</td></tr>
+		<tr><td>created_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>updated_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+	</tbody>
+</table>
+<table class="table table-compressed table-striped">
+	<thead>
+		<tr><th>person_date_foods</th><th></th><th></th><th></th><th></th><th></th></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td>int</td><td>1.2E+08</td><td>9</td><td>pk</td><td>AUTO_INCREMENT</td></tr>
+		<tr><td>people_id</td><td>int</td><td>1.2E+08</td><td>9</td><td>fk</td><td>references people</td></tr>
+		<tr><td>date_food_id</td><td>int</td><td>1.2E+08</td><td>9</td><td>fk</td><td>references date_food</td></tr>
+		<tr><td>rating</td><td>int</td><td>3</td><td>9</td><td></td><td></td></tr>
+		<tr><td>created_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+		<tr><td>updated_at</td><td>datetime</td><td>#######</td><td></td><td></td><td>NOT NULL</td></tr>
+	</tbody>
+</table>
 
         <p></p>
         <h1>Wireframes</h1>
