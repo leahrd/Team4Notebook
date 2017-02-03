@@ -17,7 +17,7 @@ html {
         margin-left: 0px;
         margin-right: 0px;
         width: 100%;
-        min-height: 450px;
+        min-height: 50%;
         background-size: cover;
         margin-bottom: 0;
         color: #fff;
@@ -35,6 +35,7 @@ html {
 }
 hr {
         border: none;
+        height:1px;
         /* Set the hr color */
         color: #414b56; /* old IE */
         background-color: #414b56; /* Modern Browsers */
@@ -258,9 +259,7 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing {
-        padding-top:20px;
-}
+
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
