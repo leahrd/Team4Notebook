@@ -55,5 +55,51 @@
                 </tr>
         </table>
         <h1>Databases</h1>
+        <table class="table table-responsive">
+                <tr class="text-center">
+                        <th>Name</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                </tr>
+                <tr>
+                        <td>PostgreSQL</td>
+                        <td>
+                                <ul>
+                                        <li>Third party tools and libraries can make PostgreSQL easier to use</li>
+                                        <li>Programmable and therefore extensible with stored procedures.</li>
+                                        <li>Capable of handling many tasks efficiently</li>
+                                        <li>No read locks</li>
+                                        <li>ACID compliant, data integrity maintained.  Multiple queries will return same output.</li>
+                                </ul>
+                        </td>
+                        <td>
+                                <ul>
+                                        <li>Not great for read-heavy usage.  Because powerful, these types of operations can be slower. </li>
+                                        <li>Not as popular as MySQL.  Might be harder to find support</li>
+                                </ul>
+                        </td>
+                </tr>
+                <tr>
+                        <td>MySQL</td>
+                        <td>
+
+                                <ul>
+                                        <li>Because MySQL is very popular, there are many third-party tools and integrated libraries</li>
+                                        <li>Easy to learn</li>
+                                        <li>Lots of security features</li>
+                                        <li>Can handle lots of data</li>
+                                        <li>Good read concurrency</li>
+
+                                </ul>
+                        </td>
+                        <td>
+                                <ul>
+                                        <li>Not fully SQL compliant.  If we find that we need more SQL functionality, switching from MySQL to another relational database can be difficult.</li>
+                                        <li>Although MySQL handles read concurrency well, read-write concurrency can be problematic. </li>
+                                        <li>There are some known functional limitations (Leah will look into this more)</li>
+                                </ul>
+                        </td>
+                </tr>
+        </table>
 
 </div>
