@@ -17,32 +17,65 @@
                         <th>Cons</th>
                 </tr>
                 <tr>
-                        <td>Option 1</td>
+                        <td>Express (on top of NodeJS)</td>
                         <td>
                                 <ul>
-                                        <li>Foo</li>
+                                        <li>Node.js uses JavaScript, which we're familiar with and is used on the frontend as well</li>
+                                        <li>npm (Node packaged modules) is a growing set of libraries with an active community (Examples include Mocha.js for unit testing, Grunt.js for automated build tasks, Brackets for full-text code editing)</li>
+                                        <li>Node.js is good for I/O intensive applications because it can handle concurrent asynchronous requests</li>
+                                        <li>Express is the most mature and stable Node.js framework</li>
+                                        <li> Smaller learning curve (more minimalist) than the "batteries included" frameworks like Django and Rails)</li>
 
                                 </ul>
                         </td>
                         <td>
                                 <ul>
-                                        <li>Bar</li>
+                                        <li>Node is bad for CPU-intensive applications because JS is single threaded and an operation can block the event loop</li>
+                                        <li>In Node, easy to fall into "callback hell" (unreadable code loaded with callbacks) without understanding asynchronous programming well</li>
+                                        <li>Express has no built-in error handling</li>
+                                        <li>Express has larger footprint compared to other Node.js frameworks (like Koa and Hapi)</li>
                                 </ul>
                         </td>
                 </tr>
                 <tr>
-                        <td>Option 2</td>
+                        <td>Django</td>
                         <td>
 
                                 <ul>
-                                        <li>Foo</li>
-
+                                        <li>Uses Python, which is generally considered a very readable and straightforward language</li>
+                                        <li>Mature and stable ecosystem</li>
+                                        <li>Strong admin interface for managing databases (and creating mappings with application objects), and supports wide range of databases</li>
+                                        <li>Support for templating and object relational modeling</li>
 
                                 </ul>
                         </td>
                         <td>
                                 <ul>
-                                        <li>Bar</li>
+                                        <li>Templating language can be restrictive-- doesn’t allow for Python functions to be called</li>
+                                         <li>Things have to be done more explicitly (less "magic" than in Rails)-- for example, auto-incrementing has to be activated by user</li>
+                                        </li>Relatively large learning curve because it comes with so much built in</li>
+
+                                </ul>
+                        </td>
+                </tr>
+                 <tr>
+                        <td>Ruby on Rails</td>
+                        <td>
+
+                                <ul>
+                                        <li>Rich library of Gems</li>
+                                        <li>Bundler is great for managing dependencies (similar to npm)</li>
+                                        <li>Commands are very powerful (lots of stuff, for example, scaffolding can happen "automagically" with the right commands)</li>
+                                        <li>Data migrations are well supported</li>
+
+                                </ul>
+                        </td>
+                        <td>
+                                <ul>
+                                        <li>Learning the right commands to achieve the "magic" has a large learning curve</li>
+                                         <li>Internals of "magic commands" can be difficult to understand</li>
+                                         <li>Very large footprint</li>
+                                        </li>Opinionated (for example, routing structure and ActiveRecord both make assumptions about your app's structure)</li>
 
                                 </ul>
                         </td>
