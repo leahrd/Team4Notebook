@@ -64,11 +64,17 @@
                                         <li>All members of the group are familiar with it.</li>
                                         <li>Documentation and support is good, won’t anticipate using its platform services that challenging</li>
                                         <li>You can deploy using git commands</li>
+                                        <li>Free for the first DYNO (allows to run many kinds of app, simple API’s)</li>
+                                        <li>Good for small Apps</li>
                                 </ul>
                         </td>
                         <td>
                                 <ul>
                                         <li>Limited control over architecture : Heroku just gives an environment where you just push your code </li>
+                                        <li>You can’t increase RAM, storage or CPU performance
+Additional storage must be hosted separately through another service.</li>
+<li>Not the best option for large Apps (i.e requiring a larger database, bigger RAM).
+</li>
                                 </ul>
                         </td>
                 </tr>
@@ -77,14 +83,19 @@
                         <td>
 
                                 <ul>
-                                        <li>Foo</li>
+                                        <li>Flexibility in terms of the architecture: You can choose the best memory configuration , CPU and
+                       And storage for your app
+                                        </li>
+                                        <li> Provides a reliable platform through its many data center groups around the world.</li>
 
 
                                 </ul>
                         </td>
                         <td>
                                 <ul>
-                                        <li>Bar</li>
+                                        <li>You have to deploy your application yourself</li>
+<li>You have to administer the system yourself.</li>
+<li>Launching multiple app instances is not as easy with Heroku </li>
 
                                 </ul>
                         </td>
@@ -180,7 +191,6 @@
                                 <ul>
                                         <li>Not fully SQL compliant.  If we find that we need more SQL functionality, switching from MySQL to another relational database can be difficult.</li>
                                         <li>Although MySQL handles read concurrency well, read-write concurrency can be problematic. </li>
-                                        <li>There are some known functional limitations (Leah will look into this more)</li>
                                 </ul>
                         </td>
                 </tr>
