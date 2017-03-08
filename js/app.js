@@ -21,6 +21,10 @@ app.config(function($routeProvider,$locationProvider) {
                 templateUrl: '../Team4Notebook/partials/entry2.html',
                 controller: 'mainCtrl'
         })
+	.when('/entry3', {
+                templateUrl: '../Team4Notebook/partials/entry3.html',
+                controller: 'mainCtrl'
+        })
         .when('/about', {
                 templateUrl: '../Team4Notebook/partials/about.html',
                 controller: 'mainCtrl'
