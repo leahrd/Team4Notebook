@@ -1,0 +1,26 @@
+<div class="landing-bg">
+<div class="jumbotron">
+        <div class="container">
+                <h1>Leg 3: Minimum Viable Product</h1>
+                <p class="lead">March 7, 2017</p>
+        </div>
+</div>
+</div>
+<div class="container">
+        <h1>Settling on a web framework</h1>
+        <p>At the start of Leg 3, we took a good look at the pros and cons we had established in Leg 2 to try to make a decision on which web framework to use.  We decided to go with Django as our web framework. We felt that Django was a happy medium among the three frameworks, given that Node.js is younger and Ruby on Rails is very “magic” and has a large footprint.</p>
+	<h1>Initial problems with Django</h1>
+	<p>As we started to dive further into Django’s inner workings, however, one concern reared its ugly head right away: how were we going to integrate our front-end Javascript framework code within the Django templates? We did some research and it had been done by a few people, but it looked complicated and wasn’t documented nearly enough to make us feel comfortable. Furthermore, using the templating language would force all of us to use a full Django environment even for decorative front-end work.</p>
+
+<p>We were at a engineering cross-roads at this point: we liked the object-relational modeling and solid documentation Django offered, but we didn’t like how it would impact our front-end code. Then, it finally hit us: we didn’t have to pick between the two. We could have our cake and eat it too! Enter “separation of concerns”, a concept that has been hammered into us in academia for good reason.</p>
+
+	<h1>A new vision</h1>
+	<p>We decided to go with a different architecture: use Django purely as a REST API connected to our database, and have our front-end Javascript framework call it from its own server. Not only did this help address our concern about templating, but it provided two other benefits as well: First, we could expose ourselves to a wider range of technologies, because having a Javascript frontend server means we could work in Node.js/Express in addition to Django on the other server. Second, we could separate our work more cleanly. No longer did the backend developers have to worry about the presentation logic, and no longer did the frontend development have to worry about the database. </p>
+	<h1>More Django issues</h1>
+	<p>And so we began. The honeymoon wouldn’t last for long, however, as we struggled to learn the Django REST Framework. The documentation for this framework was a fraction of the documentation Django as a whole. After a couple of silly mistakes involving wrong directories, dependencies, and even malformed commands, we eventually put together a REST API that returned a list of foods and their nutrition facts.</p>
+
+<p>Our next challenge was to establish the actual models to fit our proposed database schema. At first we did this by basically using the models.py class as almost a mirror of the SQL needed to establish the many-to-one and many-to-many relationships. Instead of leveraging the “magic” of Django, we tried to follow our schema from scratch. This proved to be a challenge, however, once it came time to serialize the objects as JSON.</p>
+
+<p>It was difficult to get Django to realize that it should go down the hierarchy and return the entire nested object. It was even more difficult to get Django to realize the true nature of the relations between the objects. We eventually realized that it was best to let the “magic” of Django work here, by using ManyToMany and ManyToOne relationships to automatically create the necessary SQL for us. Not only did this make the creation of the schema easier, but it made the population of the database exponentially easier (now, we could just create objects in the Python shell instead of manually creating the entries in SQL). It was at this moment that we started to believe we really made the right decision in going with Django. (We sure learned a lot about SQL, in the process, though!) Although it’s difficult to say exactly how many hours were spent, we feel confident in saying that approximately 75% of our time was spent learning the technology, and only 25% actually implementing our specific application. Our database remains SQLite for demonstrative purposes, but we have chosen postgres as our production DB for its scalability and performance (based on our analysis in Leg 2).</p>
+
+</div>
