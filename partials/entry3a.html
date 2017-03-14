@@ -1,0 +1,26 @@
+<div class="landing-bg">
+<div class="jumbotron">
+        <div class="container">
+                <h1>Leg 3: Minimum Viable Product - Front End Update</h1>
+                <p class="lead">March 4, 2017</p>
+        </div>
+</div>
+</div>
+<div class="container">
+ <h1>Setting up a Single Page Application front end with React</h1>
+        <p>For the front-end, we’ve been working on creating a single-page application style front end using React and React Router. Coming from using AngularJS 1.5, there’s been a steep learning curve, mostly involving setup and configuration. </p>
+
+<p>I managed to get a general sense from cloning and exploring the recommended hello-react app from the React documentation. If you look at the first commit to the front-end branch, that’s pretty close to what you see.  However, knowing that the project would expand and have multiple views, components, etc, I wanted to figure out a modular way to structure the project. </p>
+
+<p>I met up with a Tufts alumnus on March 4 (Connor Taylor), who was very helpful in providing guidance on best practices and showed me one of his React projects. I took note of how he separated the source files into three main folders: Components, Containers, and Views. He said this was just one opinionated way of doing it, but it made a lot of a sense to me. </p>
+
+</p>This seemed like a logical structuring for our front end code, so I borrowed Connor’s approach and modeled our /src directory as such. Components will be any re-useable bits of html code that can be injected over and over again - things like buttons, widgets, food menu items, and navigation. Views will contain the main pages, and Containers will be any large sections of nested components. </p>
+
+<p>Another leap was learning how to use react router. Basically it sets up the front end code so client assets are loaded on the first GET request to the app, and all the templates are swapped out on the fly depending on the route. This makes things lightning fast and feel more like a native application. You can take a look under /src/Views/App/App.js to get a feel for how the routes are set up. </p>
+
+<p>Going forward, I need to figure out how to render components while mapping over array structures. I’m looking into flux or redux to make this easier and avoid messy vanilla javascript everywhere. </p>
+
+<p>- Justin </p>
+
+
+</div>
