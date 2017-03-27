@@ -1,0 +1,27 @@
+<div class="landing-bg">
+<div class="jumbotron">
+        <div class="container">
+                <h1>Shoring up the backend REST API</h1>
+        </div>
+</div>
+</div>
+<div class="container">
+        <p>As we move closer to production, it's imperative that our REST API support the actions we want to perform on the frontend. The main actions we want to support are the retrieval of location data and menu data, as well as the creation / updating of user accounts and goals. </p>
+
+<p>One challenge that came up immediately, and one that comes up when creating any REST API, was figuring out what endpoints we wanted to expose. To answer that question, we had to ask "what do we want our users to be able to do on the frontend?" We came up with a few basic actions: creating/updating an account, creating/updating nutritional goals, retrieving menus and dining locations, and registering foods inside a food diary. As a result, we set out to create the following endpoints:</p>
+<ul>
+<li>"/locations/" for retrieval of dining halls</li>
+<li>"/menus/" for selective retrieval of what foods are being offered at a given time / place</li>
+<li>"/goals/" for retrieval of a user's set nutritional limits</li>
+<li>"/consumptions/" for registration of what a user has eaten (for the diary)</li>
+</ul>
+
+<p>Another challenge that came up was access control over the resources. We discovered that a queryset filter can be used to handle incoming "GET" requests and only return data created by the user requesting it. But then, how would we keep track of the user who created the data in the first place? We didn't have a user field in our Consumption or Goals models (the two objects that would be created by our users), but more importantly, we didn't know how to track it. One path we went down was the Django concept of an "Intermediate" class, which overrides the typical Django "magic" and lets the developer have greater control over many-to-many and foreign-key relationships.</p>
+
+<p>In practice, however, intermediate classes proved difficult to manage. It was creating more complexity in our tables. We eventually discovered that we could override the "POST" handlers for these objects in order to provide more information when actually saving the models to the database. Namely, we added the user who made the request to "/goals/" or "/consumptions/" while performing the save, even though the user themselves did not explicitly provide that information in the data portion of the POST request. This made it possible to filter consumptions and goals by the user who created them, as a form of access control.</p>
+
+<p>A third challenge was figuring out how to support updating of records. Sure, when creating a record for the first time, the frontend could simply do a POST against a "root" URL like "/goals/", but how would it know where to look when it needed to update a specific goal object? One thought was to pass query parameters to specify which record to look at, but that seemed inefficient since the backend would have to run queries against the database every time. Eventually we figured out that in a true RESTful design, the backend should be passing the URL of the relevant object to the frontend, so that if the frontend wants to update it, it knows where to look. As a result, we were able to support PUT and DELETE requests against the "/goals/" endpoint.</p>
+
+<p>Finally, a fourth challenge was making sense of what logging in and logging out means within a REST API. The truth, and what we struggled with a for a while, is that the concept of logging in and out doesn't really apply to a REST API. One of the main characteristics of a RESTful API is that it's stateless, so every single request contains all the information it needs, including authentication credentials. We decided to require credentials on every request where it made sense, and only see "login" or "logout" as a frontend concern, where the frontend can decide whether or not to include those credentials or not. To the backend, it makes no difference.</p>
+
+</div>
