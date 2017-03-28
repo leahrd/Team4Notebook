@@ -6,7 +6,7 @@
 </div>
 </div>
 <div class="container">
-        <p>As we move closer to production, it's imperative that our REST API support the actions we want to perform on the frontend. The main actions we want to support are the retrieval of location data and menu data, as well as the creation / updating of user accounts and goals. </p>
+ <p>As we move closer to production, it's imperative that our REST API support the actions we want to perform on the frontend. The main actions we want to support are the retrieval of location data and menu data, as well as the creation / updating of user accounts and goals. </p>
 
 <p>One challenge that came up immediately, and one that comes up when creating any REST API, was figuring out what endpoints we wanted to expose. To answer that question, we had to ask "what do we want our users to be able to do on the frontend?" We came up with a few basic actions: creating/updating an account, creating/updating nutritional goals, retrieving menus and dining locations, and registering foods inside a food diary. As a result, we set out to create the following endpoints:</p>
 <ul>
@@ -37,6 +37,8 @@
 
 <h2>Trouble with React</h2>
 <p>I ended up getting so frustrated with React that I reverted to Angular, even after scaffolding out a front end with React. The learning curve was too steep while trying to get a minimum product working. Maybe I’ll be able to go back and make it work, but for the time being I just needed to go with what I knew would do the job so we could move forward.  It was already a big enough challenge to get data from tufts, organize everything into our own postgres database, deploy the django REST framework, and deploy a front end that showed all the current menu offerings at each dining hall. </p>
+
+<p> What we have so far lives at <a href="https://yumbo.herokuapp.com/#/">https://yumbo.herokuapp.com/#/</a>
 
 <p> - Justin & Leah </p>
 
