@@ -1,7 +1,7 @@
 <div class="landing-bg">
 <div class="jumbotron">
         <div class="container">
-                <h1>Shoring up the backend REST API</h1>
+                <h1>Shoring up the backend REST API & front end</h1>
         </div>
 </div>
 </div>
@@ -23,5 +23,21 @@
 <p>A third challenge was figuring out how to support updating of records. Sure, when creating a record for the first time, the frontend could simply do a POST against a "root" URL like "/goals/", but how would it know where to look when it needed to update a specific goal object? One thought was to pass query parameters to specify which record to look at, but that seemed inefficient since the backend would have to run queries against the database every time. Eventually we figured out that in a true RESTful design, the backend should be passing the URL of the relevant object to the frontend, so that if the frontend wants to update it, it knows where to look. As a result, we were able to support PUT and DELETE requests against the "/goals/" endpoint.</p>
 
 <p>Finally, a fourth challenge was making sense of what logging in and logging out means within a REST API. The truth, and what we struggled with a for a while, is that the concept of logging in and out doesn't really apply to a REST API. One of the main characteristics of a RESTful API is that it's stateless, so every single request contains all the information it needs, including authentication credentials. We decided to require credentials on every request where it made sense, and only see "login" or "logout" as a frontend concern, where the frontend can decide whether or not to include those credentials or not. To the backend, it makes no difference.</p>
+
+<p> - Shawyoun & Sosena </p>
+
+<hr>
+<h2> Getting Data from Tufts</h2>
+<p>Over spring break I finally managed to get a hold of someone from Tufts IT who helps coordinate with FoodPro, the vendor who manages tufts dining information. I spoke with him on the phone and explained the nature of our project. He wasn’t sure what type of database the vendor used, but he indicated he would be able to log in, do a data dump, and send me a CSV file.</p>
+
+<p>When he got back in touch, i was shocked to learn that currently FoodPro serves Tufts Dining information about its menu and nutrition offerings from a file system - there isn’t even a SQL database. He was able to send me a CSV file of the menus at different dining locations for the rest of the semester. However, I’m still waiting to see whether he can provide me with nutrition facts. I had to go into the file in excel, clean up the data to conform to our desired schemas, and save new CSVs for each table. </p>
+
+<h2>Migrating data to our own Postgres database</h2>
+<p>Leah and I were able to provision a postgres database on heroku, and use the heroku command line interface to copy information from the CSV files into different tables in our database. One issue was that I almost immediately exceeded the row limit for a hobby size database. The limit is 10,000 rows and I think after dumping everything in I hit over 17,000. I received an email saying that after 7 days I would no longer be able to insert rows unless I upgrade and pay a monthly subscription fee. This is probably a concern we’ll have to deal with moving forward. </p>
+
+<h2>Trouble with React</h2>
+<p>I ended up getting so frustrated with React that I reverted to Angular, even after scaffolding out a front end with React. The learning curve was too steep while trying to get a minimum product working. Maybe I’ll be able to go back and make it work, but for the time being I just needed to go with what I knew would do the job so we could move forward.  It was already a big enough challenge to get data from tufts, organize everything into our own postgres database, deploy the django REST framework, and deploy a front end that showed all the current menu offerings at each dining hall. </p>
+
+<p> - Justin & Leah </p>
 
 </div>
