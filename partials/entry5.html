@@ -1,0 +1,15 @@
+<div class="landing-bg">
+<div class="jumbotron">
+        <div class="container">
+                <h1>Deploying the backend into production</h1>
+        </div>
+</div>
+</div>
+<div class="container">
+ <p>Deploying to Heroku was challenging, to say the least. We went for a moonshot at first by just uploading our project and hoping for the best. Sadly, but not surprisingly, this did not work. We quickly learned that there we several additional files (including requirements.txt) which needed to be included, as well files like settings.py that needed to be changed in response to the new production environment.</p>
+
+<p>We read through all of these requirements and came to the conclusion that it would be best to leverage a "working" Django template and start to integrate our project's files one piece at a time. The problem was that the Django template was structured quite differently from our backend, and so it was difficult to figure out where to put our own files and which files needed to be kept. We eventually found a publicly available Django app whose file structure was similar (since it was also an implementation of a REST API). At this point, it became clear where we would have to put our own files, and where we have to merge files. We did that, and lo and behold-- the backend app was up and running! (It's at https://yumbo-rest-tutorial2.herokuapp.com/).</p>
+
+<p>This was all well and good, but when it came time for our frontend to actually request data, we were getting Cross Origin Request Sharing errors. After doing some research, we learned that Django does not have any built in support for CORS requests, and so we had to use a middleware to intercept requests and modify them to placate Django.</p>
+
+</div>
