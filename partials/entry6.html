@@ -1,0 +1,38 @@
+<div class="landing-bg">
+<div class="jumbotron">
+        <div class="container">
+                <h1>Unit Testing - Backend</h1>
+        </div>
+</div>
+</div>
+<div class="container">
+
+
+<p>For the back-end, our goal was to create unit tests for all our different components:</p>
+<ul >
+<li >models</li>
+<li >views</li>
+<li >urls</li>
+<li >serializers</li>
+</ul>
+<p>I was successfully able to write tests that makes sure that our models (food, meal_food, location, location_menu) were properly being serialized.</p>
+<p>For that, I created:</p>
+<ul>
+<li>food and locations objects (that I populated with dummy data).</li>
+<li>using the food objects, I created a meal_food object.</li>
+<li>using the location objects and meal_food object , I created a Location_menu object</li>
+</ul>
+<p>I made sure that:</p>
+<ul class="ul1">
+<li >each serializer returned a json object (i.e a list of key value pairs)</li>
+<li >the keys returned were consistent with the models&rsquo; fields</li>
+<li >for the meal_food serializer, the length of the values corresponding to key &ldquo;foods&rdquo; was consistent with the amount of Food objects I initially created</li>
+</ul>
+<p>I unfortunately had a harder time testing the url/ views component.</p>
+<p>My goal was to do a reverse match of urls by calling &ldquo;reverse match&rdquo; on the name of the base_name and the corresponding arguments, and expecting to get the appropriate url.</p>
+<p>However, I kept getting errors as the interpreter didn&rsquo;t recognize the pairing (and gave me a no match)</p>
+<p>From the reading I have done online, it looks the error is coming from the fact that our urls are not in the urlpatterns but are registered to the default router.</p>
+<p>Side note: these unit tests do not correspond to the updated version of our app but the version prior to spring break.</p>
+<p>Sosena</p>
+
+</div>
