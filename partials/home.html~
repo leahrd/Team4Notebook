@@ -1,7 +1,7 @@
 <div class="landing-bg">
 <div class="jumbotron">
         <div class="container text-center">
-                <h1 class="jumbotron-heading">YumYum!</h1>
+                <h1 class="jumbotron-heading">Yumbo!</h1>
                 <p class="lead">A delicious nutrition app for on-campus dining</p>
                 <p class="text-left"></p>
                 <a href="#about" class="btn btn-lg btn-accent">Learn more</a>
