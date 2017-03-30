@@ -1,0 +1,20 @@
+
+<div class="landing-bg">
+<div class="jumbotron">
+        <div class="container">
+                <h1>Entry 7: Code Review</h1>
+                <p class="lead">March 29, 2017</p>
+        </div>
+</div>
+</div>
+<div class="container">
+        <h1>Code Review: Team 1</h1>
+	<p> The Sexy Sloth Gym Tracker MVP allows users to manage and view which machines are available for use and machines that are in need of maintenance.  Additionally, the total number of hours of use is tracked and updated with each machine id entry.</p>
+	<p> Sexy Sloth Gym Tracker’s source code is clean looking and easily readable.  Overall, it is easy to understand the basics of what the code is attempting to do.  The addition of some more descriptive comments would make the code even easier to read.  </p>
+	<p> Team 1 made good use of variable names, using clear and concise variables that make it easy to understand what the programmers are referring to without the names being too long and descriptive.  It appears that variable and parameter names accurately refer to their purposes.  </p>
+	<p> The provided test cases are basic but are a good start.  So far they’ve tested the ability to create and delete entire databases but it could be good to consider including some more test cases for more complicated data creation and deletion in the database.  There are also a couple of tests for routes.  To help create a more robust testing scheme, the team might consider some test cases for actions that should be illegal.  It was difficult to tell from reading the code if only maintenance users can resolve machines that need maintenance.  The group of users who can resolve machine maintenance should be considered.  If the entire user audience has this kind of control, the app might be subject to abuses. Additionally, there are some other basic tests that could be run, such as making sure that the app works on multiple browsers.</p>
+	<p> Great that you thought to put a maximum length for the user input text field.  A maximum input of 3 characters helps to prevent injection of malicious code.  </p>
+
+
+
+</div>
