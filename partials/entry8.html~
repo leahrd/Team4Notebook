@@ -9,10 +9,10 @@
 <div class="container">
         <h1>Optimization</h1>
 	<p> Before attempting to complete any static content optimization, we used the YSlow! browser extension to quantify the performance of our app.  We received an initial grade, C. </p>
-	<img src="../images/beforescreenshot.png" alt="before">
+	<img src="images/beforescreenshot.png" alt="before">
 <p>From the start we had avoided some issues that tend to slow a web app way down but we definitely had some improvements to make.  Most of our issues were the same as those covered in class.  We really needed to combine our JS and CSS files as well as minify them.  Before any optimization our JavaScript files were not at the bottom, an easy fix.  We didn’t have any expiry headers, and although we don’t have any images, adding these would help improve our app’s performance on any subsequent visits a specific user might make. Additionally we could improve our performance by using CDN’s. </p>
 	<p> At first we attempted to minify our JS and CSS files using minifier.org without realizing that Angular has some really complicated dependencies.  So, in order to properly minify our files, we needed to pre-configure dependencies before the files could be minified using ng-annotate.  We used Grunt to minify and concatenate our JavaScript and CSS files.  We also put our Javascript files at the end of the body. In the end, we were able to improve our YSlow grade to an A.   </p>
-	<img src="../images/afterscreenshot.png" alt="after">
+	<img src="images/afterscreenshot.png" alt="after">
 	<p> We are still looking into how to use CDN and setting expiry headers.  Once we figure these out we think our app will me much faster, but we have found our app is already noticeably faster.  </p>
 
 </div>
