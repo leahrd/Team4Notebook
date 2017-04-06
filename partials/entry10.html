@@ -15,7 +15,7 @@
 
 <p>Our solution was to just use vanilla js and store menu JSON data as a string in sessionStorage, and parse the string for JSON it when we need to retrieve and render it. We tested this functionality by opening Chrome developer tools network tab, loading a specific menu page (for example, Dewick) and then doing a hard refresh. We then check to make sure that there was no additional call to the /menu’s endpoint. Sure enough, there weren’t any additional calls, and the menu information still loaded. </p>
 
-<img class="img-responsive" src="sessionStorage.png" alt="sessionStorage" />
+<img class="img" src="sessionStorage.png" alt="sessionStorage" />
 
 <p>We tried to gauge how much this improved performance, with some degree of difficulty. First, we tried using ySlow’s automatic performance report to see whether our grade had improved. However, our grade remained at 93%. That said, we noticed a visual boost in performance when re-loading the page. Previously there was a slight gap between when the page refreshed and the menu items rendered on the DOM. After implementing the cache, the re-loading of menu items seemed almost instantaneous. Though subjective, we would say that caching http results to the /menu endpoint slightly, but most importantly improved performance and user experience.</p>
 
