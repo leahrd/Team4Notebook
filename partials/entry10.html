@@ -1,19 +1,22 @@
 <div class="landing-bg">
 <div class="jumbotron">
         <div class="container">
-                <h1>Unit Testing - Front End</h1>
+                <h1>Leg 5: The Technical Writing Seminar and Memory Caching</h1>
+                <p class="lead">March 7, 2017</p>
         </div>
 </div>
 </div>
 <div class="container">
-	
-<p> For the front end, we used jasmine with protractortest to do end to end UI testing.</p>
+<h2>Memory Caching</h2>
 
-<p>This allows us to check if clicking on each of the location buttons led to the appropriate page. Similarly, this tested that sign up and log in buttons also works.</p>
+<p>In order to improve performance, we took a look at the number of http requests being made to get dining hall information and menu options. Previously, we had made a request to /locations, and then stored the locations in a $scope’d angularjs array. However, since the number of dining hall locations doesn’t change very often, we decided to hard code the locations and their id’s directly in a $scoped array that loads whenever the main angular controller loads.</p>
 
-<p>Although at this stage of our app, this testing isn&rsquo;t as valuable, once our other features are up , it will be able to efficiently test the UI.</p>
+<p>The most significant http GET requests were to the /menus endpoint, so we researched solutions for caching to minimize the number of requests. After all, our site displays daily menu offerings, so it makes sense to just remember which menu’s we’ve accessed on the same day. We looked into angular specific solutions first like $cacheFactory and other open source solutions, but all of them came with too much overhead, unnecessary dependencies, and headaches when trying to integrate. (Justin in particular felt frustrated, so he wanted to look into bare bones, vanilla js ways of improving performance.)</p>
 
-<p>Commands to run the tests: webdriver-manager start &mdash;> to start up the server </p>
-<p>Sosena</p>
+<p>Our solution was to just use vanilla js and store menu JSON data as a string in sessionStorage, and parse the string for JSON it when we need to retrieve and render it. We tested this functionality by opening Chrome developer tools network tab, loading a specific menu page (for example, Dewick) and then doing a hard refresh. We then check to make sure that there was no additional call to the /menu’s endpoint. Sure enough, there weren’t any additional calls, and the menu information still loaded. </p>
+
+<img class="image" src="sessionStorage.png" alt="sessionStorage" />
+
+<p>We tried to gauge how much this improved performance, with some degree of difficulty. First, we tried using ySlow’s automatic performance report to see whether our grade had improved. However, our grade remained at 93%. That said, we noticed a visual boost in performance when re-loading the page. Previously there was a slight gap between when the page refreshed and the menu items rendered on the DOM. After implementing the cache, the re-loading of menu items seemed almost instantaneous. Though subjective, we would say that caching http results to the /menu endpoint slightly, but most importantly improved performance and user experience.</p>
 
 </div>
