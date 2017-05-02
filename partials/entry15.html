@@ -1,0 +1,23 @@
+<div class="landing-bg">
+<div class="jumbotron">
+        <div class="container">
+                <h1>Final Project, Part 2: HealthKit Integration</h1>
+                <p class="lead">May 01, 2017</p>
+        </div>
+</div>
+</div>
+<div class="container">
+	<br><br>
+ 	<p>By the time our final presentation came around, we were pretty happy about the fact that we were able to port our web application (<a href="https://yumbo.herokuapp.com">https://yumbo.herokuapp.com</a>) into a mobile application. But in doing so, we realized that we had also opened up the possibility for a lot more functionality. At our professor's encouragement, we decided to pursue the route of integration with the Health app.</p>
+
+	<p>We were excited to discover that there was a well-developed Cordova package (<a href="https://github.com/Telerik-Verified-Plugins/HealthKit">https://github.com/Telerik-Verified-Plugins/HealthKit</a>) for integrating hybrid mobile apps with HealthKit, but weren't sure exactly how to leverage it within the context of our Angular frontend. We soon discovered ngCordova, which is essentially an interface which gives Angular access to Cordova packages as an Angular service, and its own version of HealthKit (<a href="http://ngcordova.com/docs/plugins/healthkit/">http://ngcordova.com/docs/plugins/healthkit/</a>). At this point, all we had to do is inject the dependency just like any other service (such as $http) and all of a sudden the code looked pretty familiar to what we were used to in Angular.</p>
+
+	<p>The ease of use of this package came with a price, of course. The ng-cordova version of the plugin had less functionality (and documentation) than the original package. Engineering is all about making tradeoffs, however, and we were willing to sacrifice some of the richer functionality and documentation if it meant that we could get basic integration going more quickly. It wasn't long before we had an application which, upon creating a profile for the first time, would prompt the user for permission to pull data from the Health app-- so that they wouldn't have to input all their data (age, height, weight, gender) by hand. Though basic, we felt that this was a solid proof of concept for integration that could later be expanded into more sophisticated things like calorie data. The code for this can be found on the "mobile" branch of our GitHub repo</p>
+
+	<p>We faced a few challenges in implementing this integration. One was that in our initial version of the code, the user kept getting prompted for permission to use each field as it was getting processed. Thus, the user may have had to say "yes" four different times. We felt that this wasn't user friendly at all, and so we changed the code so that all permissions would be asked for in one shot, then stored somewhere for later use.</p>
+
+	<p>A second challenge we faced was that once the permissions were granted, we weren't always getting the data back from the Health app in time to do a POST against the backend. This was a difficult problem to debug because the code was seemingly "before" the POST call within our method. Of course, we eventually realized that due to the asynchronous nature of Angular / NodeJS backend calls, order of code execution cannot be guaranteed unless we explicitly put "later" code in a callback function using "then". Given that we had several calls to the Cordova backend that needed to come before the final POST, we were afraid that the promise chain would get ugly (in other words, we would fall into what is known as "callback hell"). But enter the beauty of Angular: one of its best features is the so-called <a href="http://solutionoptimist.com/2013/12/27/javascript-promise-chains-2/">"flattening"</a> of the promise chain, which makes the code a lot more readable and performant.</p>
+	
+	<p>In implementing HealthKit integration, we felt more justified in creating a mobile app out of our web application. It was a good experience that inspired us to look at other ngCordova packages as well for the future.</p>
+
+</div>  
